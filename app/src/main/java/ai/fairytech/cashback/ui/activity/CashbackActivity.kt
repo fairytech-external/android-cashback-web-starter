@@ -91,7 +91,7 @@ class CashbackActivity: AppCompatActivity() {
         )
         val url = buildString {
             append("https://$FAIRY_CASHBACK_DOMAIN/$FAIRY_CASHBACK_PATH")
-            redirectTo?.let { append("?redirect_to=${Uri.encode(it)}") }
+            redirectTo?.let { append("?redirect_to=$it") }
         }
         webView.loadUrl(url, headers)
     }
